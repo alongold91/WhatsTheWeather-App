@@ -1,0 +1,6 @@
+Weatherstack api key = 7b3d498cf92e13e59287c044c17182ce
+https://weatherstack.com/dashboard 
+
+Currently switched to this free open source api https://open-meteo.com/en/docs#latitude=32.33&longitude=34.86&hourly=temperature_2m&current_weather=true
+
+reverse geocoding https://nominatim.org/release-docs/latest/api/Reverse/
