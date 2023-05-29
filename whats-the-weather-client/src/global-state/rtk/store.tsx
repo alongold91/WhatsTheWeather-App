@@ -1,10 +1,14 @@
 import  {weatherApiSlice}  from './rtk-query/api-slices/weather-api-slice/weatherApiSlice'
-import { configureStore } from '@reduxjs/toolkit'
+import { usersApiSlice } from './rtk-query/api-slices/users-ap-slice/UsersApiSlice';
+import { combineReducers, configureStore } from '@reduxjs/toolkit'
+
+const rootReducer = combineReducers({
+  [weatherApiSlice.reducerPath]: weatherApiSlice.reducer,
+  [usersApiSlice.reducerPath]: usersApiSlice.reducer,
+});
 
 export default configureStore({
-  reducer: {
-    [weatherApiSlice.reducerPath]: weatherApiSlice.reducer
-  },
+  reducer: rootReducer,
   middleware: getDefaultMiddleware =>
-    getDefaultMiddleware().concat(weatherApiSlice.middleware)
+    getDefaultMiddleware().concat(weatherApiSlice.middleware, usersApiSlice.middleware)
 })

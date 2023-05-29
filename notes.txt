@@ -1,3 +1,7 @@
-continue from https://www.youtube.com/watch?v=MV9NC3FoCmM -> 18:13
+continue from https://docs.nestjs.com/controllers#redirection
+
+and then: https://www.youtube.com/watch?v=FgOrzG73z_k&t=6s
+
+
 next step is (creating a spinner): https://www.youtube.com/watch?v=ssncc31DMG4
 

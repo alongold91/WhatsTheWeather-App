@@ -5,6 +5,9 @@ import * as Yup from "yup";
 import FormikTextField from "../../common-components/formik-form-components/text-field/FormikTextField";
 import PrimaryButton from "../../common-components/buttons/PrimaryButton";
 import { makeStyles } from "tss-react/mui";
+import { useGetUsersQuery } from "../../global-state/rtk/rtk-query/api-slices/users-ap-slice/UsersApiSlice";
+
+
 
 const INITIAL_FORM_STATE = {
   firstName: "",
@@ -39,6 +42,8 @@ const useStyles = makeStyles()((theme) => {
 });
 
 const SignUp = () => {
+  const { data: users, error, isLoading } = useGetUsersQuery({});
+  console.log(users);
   const { classes } = useStyles();
   return (
     <Container maxWidth="md">
